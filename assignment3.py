@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #   1
 a = 15
 b = 20
@@ -135,7 +135,7 @@ text = "PYTHON"
 
 
 
-=======
+
 # Topic-1 — Comparison Operators
 
 
@@ -536,7 +536,7 @@ print("Last word:", words[-1])                   #powerful
 print("Total number of words:", len(words))      #4
 
 
-Topic-8 — Escape Sequences
+# Topic-8 — Escape Sequences
 
 
 # Q42. New Line
@@ -581,7 +581,7 @@ print("Student Details\n\nName :\t",Name, "\nAge :\t", Age, "\nCourse:\t", Cours
 # Course:  B.Tech
 
 
-Topic-9 — print(), sep, end, and f-Strings
+# Topic-9 — print(), sep, end, and f-Strings
 
 
 # Q49. sep
@@ -615,11 +615,11 @@ print(f"Name : {Name}", f"Age : {Age}", f"City : {City}", f"Course : {Course}", 
 # Take a price as input and display it with exactly two decimal places.
 # Use an f-string.
 price = float(input("Enter price: "))
-print(f"{price:.2f}")
+print(f"{price:,2f}")
 # Remember: .2f = exactly 2 digits after the decimal point.
 
 
-Topic-10 — Debugging
+# Topic-10 — Debugging
 
 
 # Q54. String and Integer
@@ -655,7 +655,7 @@ print(int(a) + int(b))
 print("C:\\new\\test")
 
 
-Topic-11 — Integrated Problems
+# Topic-11 — Integrated Problems
 
 
 # Q60. Student Result Information
@@ -788,4 +788,4 @@ print(f"Code: {degree}\\{branch }\\{roll_number}")
 name = input("full name : ") #Rahul Kumar Sharma
 NAME = name.split()
 print(f"Original : {name}", f"First Name : {NAME[0]}", f"Last Name : {NAME[-1]}", f"First Name (Upper Part) : {name[0:3:-1]}", f"Last Name (Lower Part) : {name[-1:-3:-1]}", f"Full Name Reversed {name[::-1]}", sep="\n")
->>>>>>> 0960d825029500289b2d1ec148e5ceebe74b3d0b
+
