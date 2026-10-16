@@ -504,7 +504,156 @@ for i in range(digits):
 if second == -1:
     print("No second largest digit")
 else:
-    print(second) 
+    print(second)
+#54
+#Level 7 — Tricky Single-Loop Problems
+#53
+n = int(input())
+largest = -1
+second = -1
+for i in range(len(str(n))):
+    digit = n % 10
+    if digit > largest:
+        second = largest
+        largest = digit
+    elif digit != largest and digit > second:
+        second = digit
+    n //= 10
+print(second)
+
+#54
+s = input()
+current = 0
+best = 0
+previous = ""
+for ch in s:
+    if ch == previous:
+        current += 1
+    else:
+        current = 1
+    if current > best:
+        best = current
+    previous = ch
+print(best)
+
+#55
+s, target = input().split()
+count = 0
+for ch in s:
+    if ch == target:
+        count += 1
+print("Count =", count, "Frequency =", round(count / len(s) * 100, 2), "%")
+
+#56
+n = int(input())
+total = 0
+for i in range(len(str(n))):
+    total += n % 10
+    print(total)
+    n //= 10
+
+#57
+n = int(input())
+even = 0
+odd = 0
+for i in range(len(str(n))):
+    if (n % 10) % 2 == 0:
+        even += 1
+    else:
+        odd += 1
+    n //= 10
+if even > odd:
+    print("More Even Digits")
+elif odd > even:
+    print("More Odd Digits")
+else:
+    print("Equal")
+
+#58
+n = int(input())
+total = 0
+sign = 1
+for i in range(len(str(n))):
+    total += sign * (n % 10)
+    sign *= -1
+    n //= 10
+print(total)
+
+#59
+2
+6
+12
+20
+30
+
+#60
+5
+
+#61
+total = 0
+for i in range(1, 6):
+    total += i
+print(total)
+#Level 9 — Final Challenges
+#68
+n = int(input())
+digits = total = even = odd = 0
+largest = 0
+smallest = 9
+
+for i in range(len(str(n))):
+    d = n % 10
+    digits += 1
+    total += d
+
+    if d > largest:
+        largest = d
+    if d < smallest:
+        smallest = d
+
+    if d % 2 == 0:
+        even += 1
+    else:
+        odd += 1
+
+    n //= 10
+
+print("Digits:", digits)
+print("Sum:", total)
+print("Largest:", largest)
+print("Smallest:", smallest)
+print("Even Digits:", even)
+print("Odd Digits:", odd)
+
+#69
+s = input()
+vowels = consonants = upper = lower = even = 0
+
+for i in range(len(s)):
+    ch = s[i]
+
+    if i % 2 == 0:
+        even += 1
+
+    if ch.isalpha():
+        if ch.lower() in "aeiou":
+            vowels += 1
+        else:
+            consonants += 1
+
+        if ch.isupper():
+            upper += 1
+        else:
+            lower += 1
+
+print("Total Characters:", len(s))
+print("Vowels:", vowels)
+print("Consonants:", consonants)
+print("Uppercase:", upper)
+print("Lowercase:", lower)
+print("Even Index Characters:", even)
+
+     
 
 
                   
